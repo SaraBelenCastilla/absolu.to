@@ -1,0 +1,441 @@
+
+
+.header__container{
+    padding:2%;
+   
+    display: flex;
+    flex-flow:row-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+    
+   /* contenedor con un flex row space-between */
+  }
+  /* .logo{
+    width: 12.5rem;
+  }
+  .header__menu{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3em;
+   
+  } */
+  /* .header__lista{
+    
+   
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    
+  }
+   
+  
+  .header__navegacion{
+   box-sizing: border-box;
+  
+  }
+  .header__h1{
+    font-size: 1.5em;
+    font-family:var(--tipo-principal);
+   } */
+  /* .header__elementoLista{
+   list-style-type: none;
+   
+  }
+  .header__Lista.isActive{
+    opacity: 1;
+    height: 30vh;
+   } */
+  /* .enlaces{
+  
+    font-family:var(--tipo-tercera);
+    font-size: 1.2em;
+    text-decoration: none;
+    color:white;
+    flex-flow: nowrap;
+    
+  }
+  .header__linkLista:hover{
+  
+    font-family: var(--tipo-principal);
+    
+  }   */
+  .header{
+    width: 100%;
+    height: auto;
+   
+   position: fixed;
+   z-index: 50;
+   
+  } 
+  .logo{
+    width: 12.5rem;
+  } 
+  .header__menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:0;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center ;
+    align-items: center;
+    
+    background-color:rgba(245, 243, 235, 0.038);
+    -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+   
+        overflow: hidden; /* Oculta contenido desbordado */
+    opacity: 0;
+    transition: all 1s ease;
+  } 
+  .header__menu.isActive{
+   opacity: 1;
+   width: 70%;
+  
+  
+    
+  }
+  
+  .header__lista{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: start;
+    padding-left: 5%;
+    
+  
+   
+  }
+  .header__tamano:hover > :not(:hover){
+    opacity: 0.5;
+   
+   
+  }
+  
+  .enlaces{
+    margin:  0;
+    font-size: 4em;
+    font-family: var(--tipo-principal);
+    font-weight: 800;
+    line-height: 1;
+    text-align: right;
+    transition: opacity 0.6s ease;
+  }
+  li{
+    text-align: left;
+  }
+  /* li:nth-child(1){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/origen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(5deg);
+  
+  
+  }
+  li:nth-child(2){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/niña.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-5deg);
+  }
+  li:nth-child(3){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/trascenio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-10deg);
+  }
+  li:nth-child(4){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/equipo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(5deg);
+  }
+  li:nth-child(5){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/clandestina.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-2deg);
+  }
+  li:nth-child(6){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/razones.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  li:nth-child(7){
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-image: url(../assets/papelitos/hablamos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-10deg);
+  } */
+  .header__boton{
+    width: auto;
+    padding: .3125rem;
+    cursor: pointer;
+    z-index: 2;
+   background-color: white;
+   border-radius: 50%;
+  }
+  .menu__icon{
+    font-size: 2.5em;
+    color:rgb(5, 11, 21);
+    cursor: pointer;
+  }
+  .menu__icon.isActive{
+    display: none;
+  }
+  .menu__close{
+    font-size: 2.5em;
+    color:rgb(5, 11, 21);
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+  }
+  .menu__close.isActive{
+    display: block;
+  }
+  .cruz{
+    font-size: 2.2em;
+    width: 2.5em;
+    z-index: 5;
+  }
+  .header__cabecera{
+    position: absolute;
+    top: 1.5625rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+  }
+  .header__tamano{
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(255, 255, 255, 0.838);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .enlaces1{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(../assets/papelitos/origen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(5deg);
+  }
+  .enlaces1:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces2{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(../assets/papelitos/niña.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-5deg);
+  }
+  .enlaces2:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces3{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(../assets/papelitos/trascenio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-10deg);
+  }
+  .enlaces3:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces4{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-image: url(../assets/papelitos/equipo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    transform: rotate(5deg);
+  }
+  .enlaces4:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces5{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-image: url(../assets/papelitos/clandestina.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-2deg);
+  }
+  .enlaces5:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces6{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(../assets/papelitos/razones.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .enlaces6:hover{
+    transform:rotate(0deg);
+  }
+  .enlaces7{
+    width: auto;
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.5em;
+    color:black;
+    padding: 0.2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-image: url(../assets/papelitos/hablamos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-10deg);
+  }
+  .enlaces7:hover{
+    transform:rotate(0deg);
+  }
+  .tamano__h3{
+    height: auto;
+    font-family: "veneer", sans-serif;
+    font-weight: 200;
+    font-size: 2.2em;
+    color:black;
+   
+    padding-left: 1%;
+    padding-right: 1%;
+    
+  } 
